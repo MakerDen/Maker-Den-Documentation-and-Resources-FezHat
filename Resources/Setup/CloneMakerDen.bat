@@ -5,10 +5,10 @@ SET "Solution=c:\MakerDen\Source\"
 
 rd /s /q %Solution%
 
-git clone https://github.com/MakerDen/IoT-Maker-Den-Windows-for-IoT.git --depth 1 %Solution%
+git clone https://github.com/MakerDen/Maker-Den-Windows-IoT-Core-FEZ-HAT.git --depth 1 %Solution%
 
-REM Set RPi Remote Device Name for Visual Studio
-CALL %SetupResources%\Setup\RPiName %~1
+REM Set RPi Remote Device Name for Visual Studio - dglover Jun 1, 2016 - no longer required, leave default minwinpc device name 
+REM CALL %SetupResources%\Setup\RPiName %~1
 
 REM copy across the snippets
 CALL %SetupResources%\Setup\Snippets
