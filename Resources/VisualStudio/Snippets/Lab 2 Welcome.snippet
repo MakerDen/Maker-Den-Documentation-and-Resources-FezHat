@@ -3,28 +3,22 @@
     xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>Lab 2 Sensing the ambient light levels</Title>
+      <Title>Lab 2 Welcome Experiment</Title>
       <Shortcut>lab2</Shortcut>
     </Header>
     <Snippet>
       <Code Language="CSharp">
-        <![CDATA[        
-while (true)
+        <![CDATA[while (true)
 {
-    var level = hat.GetLightLevel() * 100;
-
-    if (level > LIGHT_THRESHOLD)
-    {
-        hat.D2.Color = FEZHAT.Color.Blue;
-    }
-    else
-    {
-        hat.D2.Color = FEZHAT.Color.Red;
-    }
-
+    hat.D2.Color = FEZHAT.Color.Red;
     await Task.Delay(500);
-}           
-            ]]>
+
+    hat.D2.Color = FEZHAT.Color.Green;
+    await Task.Delay(500);
+
+    hat.D2.Color = FEZHAT.Color.Blue;
+    await Task.Delay(500);
+}]]>
       </Code>
     </Snippet>
   </CodeSnippet>
