@@ -2,11 +2,11 @@
 
 ![Maker Den](https://raw.githubusercontent.com/MakerDen/IoT-Maker-Den-Documentation-and-Resources/master/Resources/Images/MakerDen.jpg)
 
-#Maker Den Source Code
+#Iot Den Source Code
 Source code for the [Maker Den on Windows 10 IoT Core](https://github.com/MakerDen/IoT-Maker-Den-Windows-for-IoT) project. 
 
 ##WINDOWS 10 IOT CORE
-The lab has a dependency on Windows 10 IoT Core version 10.0.10556 and above. At at Nov, 2015, this is the [Insiders Preview](http://ms-iot.github.io/content/en-US/Downloads.htm).
+The lab has a dependency on Windows 10 IoT Core version 10.0.14342 and above. At at July, 2016, this is the [Insiders Preview](http://ms-iot.github.io/content/en-US/Downloads.htm).
 
 
 ##Device Hardware and Software requirements
@@ -14,6 +14,7 @@ The lab has a dependency on Windows 10 IoT Core version 10.0.10556 and above. At
 3. [Setup your Rasberry Pi 2](http://ms-iot.github.io/content/en-US/win10/SetupRPI.htm).
 4. [Enabling Internet Connection Sharing](http://ms-iot.github.io/content/en-US/win10/ConnectToDevice.htm).
 	- The advantage of using ISC is that each device is isolated behind the NAT provided by ISC.
+5. [GHI Electronics FEZ HAT](https://www.ghielectronics.com/catalog/product/500)
 
 ##NETWORK CONNECTIVITY
 
@@ -34,17 +35,10 @@ Raspberry [Wi-Fi compatible dongles](http://ms-iot.github.io/content/en-US/win10
 
 
 
-##Recommendation
-1. The default name for a freshly installed Raspberry Pi 2 is “minwinpc”.  You should rename all the devices to be used in the Maker Den to avoid Visual Studio deploying to Raspberry Pis that may be running elsewhere on the network with the default name.
-	-	Fastest way to rename a Raspberry Pi is from the Windows 10 IoT Core Web Admin console. 
-	-	Alternatively use [Powershell commands](http://ms-iot.github.io/content/en-US/win10/samples/PowerShell.htm)
-	-	You’ll use this name in the Maker Den Bootstrap process
-
 #Install Maker Den on to PC
 
 1. First install [GitHub Windows Client Tools](http://git-scm.com/download/win)
 2. Create a local bootstrap.bat file and copy and paste the contents of the [Maker Den Bootstrap](https://raw.githubusercontent.com/MakerDen/IoT-Maker-Den-Documentation-and-Guides/master/Resources/Setup/Bootstrap.bat) into the .bat file.
-	- Modify the SET "RPiName=RPiIgnite15" line and change the value of RPiName to match the name you selected when you set up the Raspberry Pis.
 3. Run the Bootstrap.bat file. It will clone the documentation and resources to the local devices.
 4. In Visual Studio restore the Nuget cache by building the project
 5. Add the Maker Den Snippets from Tools -> Code Snippet Manager -> Add -> Navigate to the \Documents\Visual Studio 2015\Code Snippets\Visual C#\MakerDen folder and click select
