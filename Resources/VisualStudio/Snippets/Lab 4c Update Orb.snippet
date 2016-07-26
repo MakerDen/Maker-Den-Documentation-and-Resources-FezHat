@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Lab 4c Update Orb</Title>
+      <Shortcut>lab4c</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[        
+double x, y, z;
+
+hat.GetAcceleration(out x, out y, out z);
+
+Color computedColour = ComputeColour(x, y, z);
+
+orb.Fill = new SolidColorBrush(computedColour);
+
+ComputeOrbPosition(x, y);
+
+orb.UpdateLayout(); // update the orb with the new colour and position
+
+hat.D2.Color = hat.D3.Color = new FEZHAT.Color(computedColour.R, computedColour.G, computedColour.B); // set both Fez Hat RGB LEDs
+
+dmxLight.Update(computedColour); // set colour on DMX RGB Light          
+            ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
